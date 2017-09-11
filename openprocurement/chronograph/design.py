@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from couchdb.design import ViewDefinition
 
+
 def sync_design(db):
     views = [j for i, j in globals().items() if "_view" in i]
     ViewDefinition.sync_many(db, views)
